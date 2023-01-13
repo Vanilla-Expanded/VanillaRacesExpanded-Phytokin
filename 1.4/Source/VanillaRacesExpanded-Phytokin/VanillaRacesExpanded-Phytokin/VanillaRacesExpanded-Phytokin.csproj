@@ -296,6 +296,7 @@
   <ItemGroup>
     <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
+    <Compile Include="Harmony\JobDriver_PlantSow_MakeNewToils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

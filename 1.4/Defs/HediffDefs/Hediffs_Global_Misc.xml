@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef>
+		<defName>VRE_Photosynthetic</defName>
+		<label>photosynthesis</label>
+		<description>This person is capable of converting light energy into chemical energy due to the special genetic composition of their skin. They do not become hungry if exposed to sunlight.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_StageBySunlight">
+
+			</li>
+		</comps>
+		<stages>
+			
+			<li>
+				<label>in sunlight</label>
+				<minSeverity>0.1</minSeverity>
+				<hungerRateFactorOffset>-.9999</hungerRateFactorOffset>
+			</li>
+			<li>
+				<label>out of sunlight</label>
+				<minSeverity>1</minSeverity>
+				
+			</li>
+			
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>VRE_SapBlood</defName>
+		<label>sap blood</label>
+		<description>This person has a thick, sticky, orange blood that greatly slows down their bleed out time, however it also impacts their ability to do work.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<totalBleedFactor>0.5</totalBleedFactor>
+				<statFactors>
+					<WorkSpeedGlobal>0.8</WorkSpeedGlobal>
+					
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

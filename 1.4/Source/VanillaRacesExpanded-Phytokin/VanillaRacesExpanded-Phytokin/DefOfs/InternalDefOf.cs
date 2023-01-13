@@ -11,7 +11,9 @@ namespace VanillaRacesExpandedPhytokin
     [DefOf]
     public static class InternalDefOf
     {
+        public static GeneDef VRE_GreenThumb;
+        public static ThoughtDef VRE_GreenThumbHappy;
 
-        
+
     }
 }

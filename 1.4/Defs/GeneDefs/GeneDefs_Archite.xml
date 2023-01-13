@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<GeneDef>
+		<defName>VRE_Photosynthesis</defName>
+		<label>photosynthesis</label>
+		<description>Carriers of this gene are capable of converting light energy into chemical energy due to the special genetic composition of their skin. They do not become hungry if exposed to sunlight.</description>
+		<iconPath>UI/Icons/Genes/Gene_Photosynthesis</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>2</biostatMet>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>photo</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>synthesis</symbol>
+				</li>
+				<li>
+					<symbol>plant</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
 
-
-
-
-
-
+				<hediffToWholeBody>VRE_Photosynthetic</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</GeneDef>
 </Defs>
