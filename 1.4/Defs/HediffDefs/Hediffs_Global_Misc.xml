@@ -61,7 +61,7 @@
 		<initialSeverity>1.0</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-5</severityPerDay><!---0.166-->
+				<severityPerDay>-0.166</severityPerDay>
 				<showDaysToRecover>true</showDaysToRecover>
 			</li>
 			<li Class="VanillaRacesExpandedPhytokin.HediffCompProperties_Saplingchild">

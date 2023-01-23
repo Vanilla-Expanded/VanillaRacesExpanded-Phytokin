@@ -23,7 +23,10 @@ namespace VanillaRacesExpandedPhytokin
 					
 					Hediff hediff = HediffMaker.MakeHediff(InternalDefOf.VRE_TempSterile, __instance.pawn);
 					__instance.pawn.health.AddHediff(hediff);
-					
+
+					Hediff hediff2 = HediffMaker.MakeHediff(InternalDefOf.VRE_Saplingchild, __instance.pawn);
+					__instance.pawn.health.AddHediff(hediff2);
+
 					ChoiceLetter letter = LetterMaker.MakeLetter("VRE_SaplingBirthReady".Translate(__instance.pawn.LabelShort), "VRE_SaplingBirthReadyDesc".Translate(__instance.pawn.LabelShort), LetterDefOf.PositiveEvent);
 					Find.LetterStack.ReceiveLetter(letter);
 					__instance.pawn.health.RemoveHediff(__instance);

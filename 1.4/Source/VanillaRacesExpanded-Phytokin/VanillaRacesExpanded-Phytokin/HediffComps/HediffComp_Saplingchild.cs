@@ -31,10 +31,7 @@ namespace VanillaRacesExpandedPhytokin
 
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
-            foreach (Gizmo gizmo in base.CompGetGizmos())
-            {
-                yield return gizmo;
-            }
+            base.CompGetGizmos();
             yield return new Command_Action
             {
                 defaultLabel = "Bla".Translate(),
@@ -42,7 +39,7 @@ namespace VanillaRacesExpandedPhytokin
                 
                 action = delegate
                 {
-                    
+                    Log.Message("Bla");
                 }
             };
         }
