@@ -36,7 +36,7 @@
 		<defName>VRE_SaplingBirth</defName>
 		<label>saplingbirth</label>
 		<description>Carriers of this gene grow their baby outside of their womb, in the form of a saplingchild plant. When the plant is fully grown, a child can be extracted from it.</description>
-		<iconPath>UI/GeneIcons/Gene_SaplingBirth</iconPath>
+		<iconPath>UI/Icons/Genes/Gene_SaplingBirth</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<displayOrderInCategory>100</displayOrderInCategory>
 		<biostatCpx>2</biostatCpx>

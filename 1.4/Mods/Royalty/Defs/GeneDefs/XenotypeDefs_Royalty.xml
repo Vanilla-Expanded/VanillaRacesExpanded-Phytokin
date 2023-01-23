@@ -16,11 +16,13 @@
 			<li>AptitudeRemarkable_Plants</li>
 			<li>Hair_Grayless</li>
 			<li>VRE_GreenThumb</li>
+			<li>VRE_SaplingBirth</li>
 			<li>VRE_Photosynthesis</li>
 			<li>VRE_BarkSkin</li>
 			<li>VRE_FoliageHair</li>
 			<li>VRE_HairColor_Anima</li>
 			<li>VRE_SapBlood</li>
+			<li>VRE_ProgressiveAttunement</li>
 			
 		</genes>
 	</XenotypeDef>

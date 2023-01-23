@@ -27,7 +27,12 @@
 		</graphicData>
 		
 		<iconPath>UI/Icons/Genes/Gene_Barkskin</iconPath>
-		
+		<forcedHeadTypes>
+			<li>VRE_BarkAverage</li>
+			<li>VRE_BarkNarrow</li>
+			<li>VRE_BarkGaunt</li>
+			<li>VRE_BarkHeavy</li>
+		</forcedHeadTypes>
 		<statOffsets>
 			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
 		</statOffsets>

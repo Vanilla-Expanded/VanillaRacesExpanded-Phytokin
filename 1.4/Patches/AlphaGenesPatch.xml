@@ -40,7 +40,7 @@
 					</value>
 				</li>	
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/GeneDef[@Name="AG_SapBlood"]/displayCategory</xpath>
+					<xpath>/Defs/GeneDef[defName="VRE_SapBlood"]/displayCategory</xpath>
 					<value>
 						<displayCategory>AG_BloodType</displayCategory>
 					</value>

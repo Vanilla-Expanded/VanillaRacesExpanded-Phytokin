@@ -50,4 +50,24 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef>
+		<defName>VRE_Saplingchild</defName>
+		<label>saplingchild needs planting</label>
+		<description>When a colonist with saplingbirth gene becomes pregnant, they need to designate a place to plant their offspring. If they don’t do it before the second trimester begins (6 days), the pregnancy will be terminated.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>1.0</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-5</severityPerDay><!---0.166-->
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+			<li Class="VanillaRacesExpandedPhytokin.HediffCompProperties_Saplingchild">
+
+			</li>
+		</comps>
+	</HediffDef>
+	
 </Defs>

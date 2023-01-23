@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-
+	<VRE_ProgressiveAttunementOffset>Progressive attunement gene</VRE_ProgressiveAttunementOffset>
+	<VRE_SaplingBirthReady>Sapling child</VRE_SaplingBirthReady>
+	<VRE_SaplingBirthReadyDesc>When a colonist with saplingbirth gene becomes pregnant, they need to designate a place to plant their offspring. If they don’t do it before the second trimester begins, the pregnancy will be terminated.</VRE_SaplingBirthReadyDesc>
 
 
 </LanguageData>
