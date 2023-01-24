@@ -17,6 +17,7 @@ namespace VanillaRacesExpandedPhytokin
         public static ThoughtDef VRE_GreenThumbHappy;
         public static HediffDef VRE_TempSterile;
         public static HediffDef VRE_Saplingchild;
+        public static JobDef VRE_PlantSaplingchild;
 
 
     }

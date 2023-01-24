@@ -294,7 +294,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\JobDrivers\JobDriver_PlantSaplingchild.cs" />
+    <Compile Include="Alerts\Alert_SaplingchildNeedsPlanting.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
+    <Compile Include="Game, World and Map Components\SaplingBirth_MapComponent.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Hediff_Pregnant_Tick.cs" />
     <Compile Include="Harmony\JobDriver_PlantSow_MakeNewToils.cs" />
@@ -303,10 +306,12 @@
     <Compile Include="HediffComps\HediffComp_Saplingchild.cs" />
     <Compile Include="HediffComps\Properties\HediffCompProperties_Saplingchild.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
     <Compile Include="StatParts\StatPart_ProgressiveAttunement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
