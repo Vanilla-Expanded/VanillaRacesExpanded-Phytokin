@@ -14,6 +14,8 @@ namespace VanillaRacesExpandedPhytokin
     public class HediffComp_Saplingchild : HediffComp
     {
         public bool miscarriage = true;
+        public List<GeneDef> motherGenes = new List<GeneDef>();
+        public XenotypeDef motherXenotype;
 
         public HediffCompProperties_Saplingchild Props
         {
@@ -27,11 +29,18 @@ namespace VanillaRacesExpandedPhytokin
         {
             base.CompExposeData();
             Scribe_Values.Look(ref this.miscarriage, nameof(this.miscarriage), true);
+            Scribe_Collections.Look(ref this.motherGenes, nameof(this.motherGenes), LookMode.Def);
+            Scribe_Defs.Look(ref this.motherXenotype, nameof(this.motherXenotype));
         }
 
         public override void CompPostMake()
         {
             if (parent.pawn.Faction == Faction.OfPlayer) { StaticCollectionsClass.AddColonistToSaplingBirthAlert(parent.pawn); }
+            foreach (Gene gene in parent.pawn.genes.Endogenes)
+            {
+                motherGenes.Add(gene.def);
+            }
+            motherXenotype = parent.pawn.genes.Xenotype;
             
             base.CompPostMake();
         }
