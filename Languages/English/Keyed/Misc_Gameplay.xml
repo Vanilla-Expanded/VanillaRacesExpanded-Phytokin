@@ -9,5 +9,6 @@
 	<VRE_SaplingNeedsSoil>Saplingchild needs to be planted on soil</VRE_SaplingNeedsSoil>
 	<VRE_SaplingchildNeedsToBePlanted>Saplingchild needs to be planted</VRE_SaplingchildNeedsToBePlanted>
 	<VRE_SaplingchildNeedsToBePlantedDesc>When a colonist with saplingbirth gene becomes pregnant, they need to designate a place to plant their offspring. If they don’t do it before the second trimester begins (6 days), the pregnancy will be terminated. These colonists need to plant their saplingchild:\n\n{0}</VRE_SaplingchildNeedsToBePlantedDesc>
+	<VRE_MotherXenotype>Mother xenotype: {0}</VRE_MotherXenotype>
 
 </LanguageData>

@@ -38,16 +38,26 @@ namespace VanillaRacesExpandedPhytokin
             Toil createSaplingChild = new Toil();
             createSaplingChild.initAction = delegate ()
             {
-                Thing thing = ThingMaker.MakeThing(ThingDef.Named("Plant_TreeAnima"), null);
+                Thing thing = ThingMaker.MakeThing(InternalDefOf.VRE_SaplingchildTree, null);
                 thing.stackCount = 1;
                 Thing t;
                 GenPlace.TryPlaceThing(thing, TargetPosition, pawn.Map, ThingPlaceMode.Direct, out t, null, null, default(Rot4));
 
+                Building_SaplingChild sapling = thing as Building_SaplingChild;
+
                 Hediff pregnancy = pawn.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VRE_Saplingchild);
                 if (pregnancy != null)
                 {
-                    pregnancy.TryGetComp<HediffComp_Saplingchild>().miscarriage = false;
-                    pawn.health.RemoveHediff(pregnancy);
+                    HediffComp_Saplingchild comp = pregnancy.TryGetComp<HediffComp_Saplingchild>();
+                    if (comp != null)
+                    {
+                        comp.miscarriage = false;
+                        sapling.motherGenes = comp.motherGenes;
+                        sapling.motherXenotype = comp.motherXenotype;
+                        sapling.mother = pawn;
+                        pawn.health.RemoveHediff(pregnancy);
+                    }
+                    
                 }
                 
                 

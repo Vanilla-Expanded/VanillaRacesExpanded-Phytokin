@@ -296,6 +296,7 @@
   <ItemGroup>
     <Compile Include="AI\JobDrivers\JobDriver_PlantSaplingchild.cs" />
     <Compile Include="Alerts\Alert_SaplingchildNeedsPlanting.cs" />
+    <Compile Include="Building\Building_SaplingChild.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Game, World and Map Components\SaplingBirth_MapComponent.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />

@@ -18,6 +18,7 @@ namespace VanillaRacesExpandedPhytokin
         public static HediffDef VRE_TempSterile;
         public static HediffDef VRE_Saplingchild;
         public static JobDef VRE_PlantSaplingchild;
+        public static ThingDef VRE_SaplingchildTree;
 
 
     }
