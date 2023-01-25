@@ -55,6 +55,7 @@ namespace VanillaRacesExpandedPhytokin
                         sapling.motherGenes = comp.motherGenes;
                         sapling.motherXenotype = comp.motherXenotype;
                         sapling.mother = pawn;
+                        sapling.SetFaction(pawn.Faction);
                         pawn.health.RemoveHediff(pregnancy);
                     }
                     

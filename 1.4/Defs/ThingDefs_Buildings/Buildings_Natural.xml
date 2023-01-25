@@ -6,7 +6,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VRE_SaplingchildTree</defName>
 		<label>saplingchild</label>
-		<description>A small, cabbage-like plant created in the first trimester of the pregnancy by a sapling-mother. After 30 days, saplingchild can be harvested and the baby can be extracted from it.</description>
+		<description>A small, cabbage-like plant created in the first trimester of the pregnancy by a sapling-mother. After 30 days, saplingchild will hatch and a child will emerge from it.\n\nMust be kept between -15 and 60ºC. If the plant is destroyed it will be treated as a stillbirth for the mother who planted it.</description>
 		<thingClass>VanillaRacesExpandedPhytokin.Building_SaplingChild</thingClass>
 		<graphicData>
 			<texPath>Things/Plant/SaplingChild_Immature</texPath>
@@ -31,6 +31,15 @@
 		<size>(1,1)</size>
 
 		<blockPlants>true</blockPlants>
+		<comps>
+
+			<li Class="VanillaRacesExpandedPhytokin.CompProperties_TempRuinableAndDestroy">
+				<minSafeTemperature>-15</minSafeTemperature>
+				<maxSafeTemperature>60</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+			</li>
+			
+		</comps>
 
 	</ThingDef>
 
