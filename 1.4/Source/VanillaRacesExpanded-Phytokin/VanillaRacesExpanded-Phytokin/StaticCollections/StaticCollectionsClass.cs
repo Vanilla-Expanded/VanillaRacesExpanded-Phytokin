@@ -15,6 +15,9 @@ namespace VanillaRacesExpandedPhytokin
         // A list of colonists needing sapling birth
         public static HashSet<Thing> sapling_birth_needed = new HashSet<Thing>();
 
+        // Number of colonists with the Polux Affinity gene currently on the map 
+        public static int polux_gene_colonists_inMap;
+
         public static void AddColonistToSaplingBirthAlert(Thing thing)
         {
 

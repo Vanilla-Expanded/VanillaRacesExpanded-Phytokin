@@ -14,19 +14,34 @@ namespace VanillaRacesExpandedPhytokin
         public static GeneDef VRE_GreenThumb;
         public static GeneDef VRE_ProgressiveAttunement;
         public static GeneDef VRE_SaplingBirth;
-        public static ThoughtDef VRE_GreenThumbHappy;
-        public static HediffDef VRE_TempSterile;
-        public static HediffDef VRE_Saplingchild;
-        public static JobDef VRE_PlantSaplingchild;
-        public static ThingDef VRE_SaplingchildTree;
-
+        public static GeneDef VRE_PoluxAffinity;
         [MayRequireRoyalty]
         public static GeneDef VRE_AnimaAffinity;
+        [MayRequireIdeology]
+        public static GeneDef VRE_GauranlenAffinity;
+
+        public static ThoughtDef VRE_GreenThumbHappy;
         [MayRequireRoyalty]
         public static ThoughtDef VRE_AnimaSong;
 
-        [MayRequireIdeology]
-        public static GeneDef VRE_GauranlenAffinity;
+        public static HediffDef VRE_TempSterile;
+        public static HediffDef VRE_Saplingchild;
+
+        public static JobDef VRE_PlantSaplingchild;
+        public static JobDef VRE_ConsumeWastepack;
+
+        public static ThingDef VRE_SaplingchildTree;
+        public static ThingDef VRE_PoluxBush;
+
+        public static EffecterDef EatVegetarian;
+
+        public static SoundDef Meal_Eat;
+
+
+
+
+
+
 
 
     }

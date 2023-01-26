@@ -17,6 +17,22 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>VRE_WastepacksNeed</defName>
+		<workerClass>VanillaRacesExpandedPhytokin.ThoughtWorker_Wastepacks</workerClass>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<requiredGenes>
+			<li>VRE_PoluxAffinity</li>
+		</requiredGenes>
+		<stages>
+			<li>
+				<label>need wastepacks</label>
+				<description>I have a need to consume and metabolize waste. It’s my purpose.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
 
 	
 

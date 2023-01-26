@@ -9,6 +9,7 @@ namespace VanillaRacesExpandedPhytokin
     public class RitualOutcomeComp_GeneCount : RitualOutcomeComp_Quality
     {
         public GeneDef gene;
+        public string explanation;
 
         public override RitualOutcomeComp_Data MakeData()
         {
@@ -76,7 +77,7 @@ namespace VanillaRacesExpandedPhytokin
             float quality = curve.Evaluate(num);
             return new ExpectedOutcomeDesc
             {
-                label = "VRE_RitualPredictedOutcomeDescAffinityGeneCount".Translate(),
+                label = explanation.Translate(),
                 count = num + " / " + Mathf.Max(base.MaxValue, num),
                 effect = ExpectedOffsetDesc(positive: true, quality),
                 quality = quality,

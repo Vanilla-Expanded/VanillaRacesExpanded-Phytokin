@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RimWorld;
+using Verse;
 
-namespace VanillaRacesExpandedPhytokin.Abilities.Properties
+namespace VanillaRacesExpandedPhytokin
 {
-    internal class CompProperties_PlantPoluxTree
+
+
+    public class CompProperties_PlantPoluxTree : CompProperties_AbilityEffect
     {
+
+
+
+        public CompProperties_PlantPoluxTree()
+        {
+            this.compClass = typeof(CompPlantPoluxTree);
+        }
     }
 }

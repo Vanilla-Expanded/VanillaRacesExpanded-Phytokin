@@ -3,18 +3,18 @@
 
 	<AbilityDef>
 		<defName>VRE_PlantPoluxTree</defName>
-		<label>plant polux tree</label>
-		<description>Plants a polux tree in the designated spot</description>
+		<label>plant polux bush</label>
+		<description>Plants a polux bush in the designated spot.</description>
 		<iconPath>UI/Abilities/PlantPoluxTree</iconPath>
-		<cooldownTicksRange>3600000</cooldownTicksRange>
+		<cooldownTicksRange>1800000</cooldownTicksRange>
 		<aiCanUse>false</aiCanUse>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
-			<range>15.9</range>
+			<range>1.9</range>
 			<warmupTime>0.5</warmupTime>
 			<soundCast>PsychicInsanityLanceCast</soundCast>
 			<targetParams>
-				<carTargetLocations>true</carTargetLocations>
+				<canTargetLocations>true</canTargetLocations>
 				<canTargetPawns>false</canTargetPawns>
 				<canTargetSelf>false</canTargetSelf>
 				<canTargetMechs>false</canTargetMechs>

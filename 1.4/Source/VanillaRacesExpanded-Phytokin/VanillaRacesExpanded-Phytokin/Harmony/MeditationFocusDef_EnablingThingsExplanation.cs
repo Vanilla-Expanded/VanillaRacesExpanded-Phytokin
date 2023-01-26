@@ -10,15 +10,26 @@ namespace VanillaRacesExpandedPhytokin
     {
         public static void Postfix(Pawn pawn, MeditationFocusDef __instance, ref string __result)
         {
-
-            if (ModLister.RoyaltyInstalled && __instance == MeditationFocusDefOf.Natural)
+            if (__instance == MeditationFocusDefOf.Natural)
             {
-                if (pawn.genes?.HasGene(InternalDefOf.VRE_AnimaAffinity) == true)
+                if (ModsConfig.RoyaltyActive)
                 {
-                    __result += "\n  - " + "VRE_UnlockedByGene".Translate() + ".";
-                }
+                    if (pawn.genes?.HasGene(InternalDefOf.VRE_AnimaAffinity) == true)
+                    {
+                        __result += "\n  - " + "VRE_UnlockedByGeneAnima".Translate() + ".";
+                    }
 
+                }
+                if (ModsConfig.IdeologyActive)
+                {
+                    if (pawn.genes?.HasGene(InternalDefOf.VRE_GauranlenAffinity) == true)
+                    {
+                        __result += "\n  - " + "VRE_UnlockedByGeneGau".Translate() + ".";
+                    }
+
+                }
             }
+            
 
 
            

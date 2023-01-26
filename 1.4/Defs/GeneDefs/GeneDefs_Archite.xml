@@ -69,7 +69,7 @@
 	<GeneDef>
 		<defName>VRE_PoluxAffinity</defName>
 		<label>polux affinity</label>
-		<description>Carriers of this gene have a special connection to the polux tree, allowing them to act as an amplifier to the special properties of the tree. Once a year they can plant a polux sapling that will inevitably grow into a big polux tree. They can also consume wastepacks and will become unhappy if there is no waste to be consumed. Consuming wastepacks does not satisfy their hunger.</description>
+		<description>Carriers of this gene have a special connection to the polux tree, allowing them to act as an amplifier to the special properties of the tree. Once a year they can plant a polux bush that will progressively grow, and their very presence will strengthen the effect of the bush's pollution pumping effects. They can also consume wastepacks and will become unhappy if there is no waste to be consumed. Consuming wastepacks does not satisfy their hunger.</description>
 		<iconPath>UI/Icons/Genes/Gene_AffinityPolux</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<displayOrderInCategory>5003</displayOrderInCategory>
@@ -80,7 +80,7 @@
 			<li>VRE_TreeAffinity</li>
 		</exclusionTags>
 		<customEffectDescriptions>	
-			<li>All polux trees on the map have their radius increased by +1 for every pawn with a Polux affinity currently on the map.</li>
+			<li>All polux bushes on the map have their radius increased by +2 for every pawn with a Polux affinity gene currently on the map.</li>
 		</customEffectDescriptions>		
 		<abilities>
 			<li>VRE_PlantPoluxTree</li>
@@ -88,6 +88,18 @@
 		<descriptionHyperlinks>
 			<AbilityDef>VRE_PlantPoluxTree</AbilityDef>
 		</descriptionHyperlinks>
+		<geneClass>VanillaRacesExpandedPhytokin.Gene_Resource_Wastepacks</geneClass>
+		<resourceGizmoType>VanillaRacesExpandedPhytokin.GeneGizmo_Resource_Wastepacks</resourceGizmoType>
+		<resourceLabel>wastepacks</resourceLabel>
+		<resourceGizmoThresholds>
+		  <li>0.2</li>
+		  <li>0.4</li>
+		  <li>0.6</li>
+		</resourceGizmoThresholds>
+		<showGizmoOnWorldView>true</showGizmoOnWorldView>
+		<resourceDescription>A need by {PAWN_nameDef} to consume wastepacks</resourceDescription>
+		<resourceLossPerDay>0.2</resourceLossPerDay>
+		<minAgeActive>3</minAgeActive>
 		<symbolPack>
 			
 			<prefixSymbols>
