@@ -14,6 +14,7 @@ namespace VanillaRacesExpandedPhytokin
     {
         public override float GetPriority(Pawn pawn)
         {
+           
             if (!ModsConfig.BiotechActive)
             {
                 return 0f;
@@ -27,6 +28,7 @@ namespace VanillaRacesExpandedPhytokin
         }
         protected override Job TryGiveJob(Pawn pawn)
         {
+           
             if (!ModsConfig.BiotechActive) { return null; }
             var gene = pawn.genes.GetFirstGeneOfType<Gene_Resource_Wastepacks>();
             if (gene == null) { return null; }
