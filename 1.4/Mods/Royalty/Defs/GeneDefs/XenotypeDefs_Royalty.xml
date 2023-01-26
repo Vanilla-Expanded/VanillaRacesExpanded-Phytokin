@@ -23,6 +23,7 @@
 			<li>VRE_HairColor_Anima</li>
 			<li>VRE_SapBlood</li>
 			<li>VRE_ProgressiveAttunement</li>
+			<li>VRE_AnimaAffinity</li>
 			
 		</genes>
 	</XenotypeDef>

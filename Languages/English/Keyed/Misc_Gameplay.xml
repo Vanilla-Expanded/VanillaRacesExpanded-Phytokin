@@ -14,5 +14,11 @@
 	<VRE_SaplingHatched>{0} has hatched from a sapling!</VRE_SaplingHatched>
 	<VRE_SaplingHatchedLabel>{0} hatched!</VRE_SaplingHatchedLabel>
 	<VRE_TimeToHatch>Time until birth: {0}</VRE_TimeToHatch>
+	<VRE_UnlockedByGeneAnima>Unlocked via Anima Affinity gene</VRE_UnlockedByGeneAnima>
+	<VRE_UnlockedByGeneGau>Unlocked via Gauranlen Affinity gene</VRE_UnlockedByGeneGau>
+	<VRE_CanOnlyBeUsedOnAnimaTree>This ability needs to be used on an anima tree</VRE_CanOnlyBeUsedOnAnimaTree>
+	<VRE_CanOnlyBePlantedOnFertile>This ability needs to be used on terrain with fertility of at least 0.05</VRE_CanOnlyBePlantedOnFertile>
+	<VRE_RitualPredictedOutcomeDescAffinityGeneCount>Anima Affinity gene</VRE_RitualPredictedOutcomeDescAffinityGeneCount>
+	<VRE_RitualPredictedOutcomeDescAffinityGeneCountGau>Gauranlen Affinity gene</VRE_RitualPredictedOutcomeDescAffinityGeneCountGau>
 
 </LanguageData>

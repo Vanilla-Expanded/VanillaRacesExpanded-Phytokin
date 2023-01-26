@@ -65,4 +65,42 @@
 			
 		</symbolPack>
 	</GeneDef>
+	
+	<GeneDef>
+		<defName>VRE_PoluxAffinity</defName>
+		<label>polux affinity</label>
+		<description>Carriers of this gene have a special connection to the polux tree, allowing them to act as an amplifier to the special properties of the tree. Once a year they can plant a polux sapling that will inevitably grow into a big polux tree. They can also consume wastepacks and will become unhappy if there is no waste to be consumed. Consuming wastepacks does not satisfy their hunger.</description>
+		<iconPath>UI/Icons/Genes/Gene_AffinityPolux</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<displayOrderInCategory>5003</displayOrderInCategory>
+		<biostatCpx>3</biostatCpx>
+		<biostatMet>-3</biostatMet>
+		<biostatArc>1</biostatArc>
+		<exclusionTags>
+			<li>VRE_TreeAffinity</li>
+		</exclusionTags>
+		<customEffectDescriptions>	
+			<li>All polux trees on the map have their radius increased by +1 for every pawn with a Polux affinity currently on the map.</li>
+		</customEffectDescriptions>		
+		<abilities>
+			<li>VRE_PlantPoluxTree</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>VRE_PlantPoluxTree</AbilityDef>
+		</descriptionHyperlinks>
+		<symbolPack>
+			
+			<prefixSymbols>
+				<li>
+					<symbol>pol</symbol>
+				</li>
+				<li>
+					<symbol>polux</symbol>
+				</li>
+			
+			</prefixSymbols>
+			
+		</symbolPack>
+	</GeneDef>
+	
 </Defs>

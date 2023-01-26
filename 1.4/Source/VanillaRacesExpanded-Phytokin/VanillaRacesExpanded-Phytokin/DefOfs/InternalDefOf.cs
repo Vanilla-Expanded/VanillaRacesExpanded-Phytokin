@@ -20,6 +20,14 @@ namespace VanillaRacesExpandedPhytokin
         public static JobDef VRE_PlantSaplingchild;
         public static ThingDef VRE_SaplingchildTree;
 
+        [MayRequireRoyalty]
+        public static GeneDef VRE_AnimaAffinity;
+        [MayRequireRoyalty]
+        public static ThoughtDef VRE_AnimaSong;
+
+        [MayRequireIdeology]
+        public static GeneDef VRE_GauranlenAffinity;
+
 
     }
 }

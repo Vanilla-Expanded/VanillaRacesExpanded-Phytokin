@@ -294,6 +294,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\CompAnimaSong.cs" />
+    <Compile Include="Abilities\Properties\CompProperties_AnimaSong.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_PlantSaplingchild.cs" />
     <Compile Include="Alerts\Alert_SaplingchildNeedsPlanting.cs" />
     <Compile Include="Building\Building_SaplingChild.cs" />
@@ -305,11 +307,14 @@
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\Hediff_Pregnant_Tick.cs" />
     <Compile Include="Harmony\JobDriver_PlantSow_MakeNewToils.cs" />
+    <Compile Include="Harmony\MeditationFocusDef_EnablingThingsExplanation.cs" />
+    <Compile Include="Harmony\MeditationFocusTypeAvailabilityCache_PawnCanUse.cs" />
     <Compile Include="Harmony\Recipe_ExtractOvum_CompletableEver.cs" />
     <Compile Include="Harmony\Recipe_ImplantEmbryo_CompletableEver.cs" />
     <Compile Include="HediffComps\HediffComp_Saplingchild.cs" />
     <Compile Include="HediffComps\Properties\HediffCompProperties_Saplingchild.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RitualOutcomeComps\RitualOutcomeComp_GeneCount.cs" />
     <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
     <Compile Include="StatParts\StatPart_ProgressiveAttunement.cs" />
   </ItemGroup>
