@@ -8,9 +8,9 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				
-			
+				
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/XenotypeDef[defName="VRE_Animakin"]/genes/li[@Name="AlphaGenesSwap"]</xpath>
+					<xpath>/Defs/XenotypeDef[defName="VRE_Gauranlenkin"]/genes/li[@Name="AlphaGenesSwap"]</xpath>
 					<value>
 						<li Name="AlphaGenesSwap">AG_Female</li>
 					</value>

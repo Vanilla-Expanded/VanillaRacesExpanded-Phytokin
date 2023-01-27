@@ -32,6 +32,8 @@ namespace VanillaRacesExpandedPhytokin
 
         public static ThingDef VRE_SaplingchildTree;
         public static ThingDef VRE_PoluxBush;
+        [MayRequireIdeology]
+        public static PawnKindDef VRE_CompanionDryad;
 
         public static EffecterDef EatVegetarian;
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AbilityDef>
+		<defName>VRE_SummonCompanionDryads</defName>
+		<label>summon companion dryads</label>
+		<cooldownTicksRange>60000</cooldownTicksRange>
+		<description>Summons two companion dryads under the control of the caster. These dryads are permanent colony animals, and can haul, clean, caravan, and be drafted. Two new dryads can be summoned if the previous ones are killed.</description>
+		<iconPath>Things/Pawn/Animal/Companiondryad/Companiondryad_east</iconPath>
+		<aiCanUse>false</aiCanUse>
+		<comps>
+			<li Class="VanillaRacesExpandedPhytokin.CompProperties_SummonCompanionDryads">
+				
+			</li>
+		</comps>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<targetRequired>False</targetRequired>
+		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<hotKey>Misc12</hotKey>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>0.5</warmupTime>
+			<drawAimPie>False</drawAimPie>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+	
+	
+</Defs>

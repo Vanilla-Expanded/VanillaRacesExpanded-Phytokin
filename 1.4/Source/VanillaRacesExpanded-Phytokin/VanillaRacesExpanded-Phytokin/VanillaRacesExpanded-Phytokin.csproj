@@ -296,10 +296,13 @@
   <ItemGroup>
     <Compile Include="Abilities\CompAnimaSong.cs" />
     <Compile Include="Abilities\CompPlantPoluxTree.cs" />
+    <Compile Include="Abilities\CompSummonCompanionDryads.cs" />
+    <Compile Include="Abilities\Properties\CompProperties_SummonCompanionDryads.cs" />
     <Compile Include="Abilities\Properties\CompProperties_AnimaSong.cs" />
     <Compile Include="Abilities\Properties\CompProperties_PlantPoluxTree.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_ConsumeWastepack.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_PlantSaplingchild.cs" />
+    <Compile Include="AI\JobGivers\JobGiver_Clean.cs" />
     <Compile Include="AI\JobGivers\JobGiver_ConsumeWastepack.cs" />
     <Compile Include="Alerts\Alert_SaplingchildNeedsPlanting.cs" />
     <Compile Include="Building\Building_SaplingChild.cs" />
@@ -308,6 +311,7 @@
     <Compile Include="Comps\Properties\CompProperties_TempRuinableAndDestroy.cs" />
     <Compile Include="Comps\Properties\CompProperties_VariablePollutionPump.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
+    <Compile Include="Game, World and Map Components\GauranlenGeneColonists_WorldComponent.cs" />
     <Compile Include="Game, World and Map Components\PoluxGeneColonists_MapComponent.cs" />
     <Compile Include="Game, World and Map Components\SaplingBirth_MapComponent.cs" />
     <Compile Include="GeneResource\GeneGizmo_Resource_Wastepacks.cs" />
@@ -328,6 +332,7 @@
     <Compile Include="RitualOutcomeComps\RitualOutcomeComp_GeneCount.cs" />
     <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
     <Compile Include="StatParts\StatPart_ProgressiveAttunement.cs" />
+    <Compile Include="ThinkNodes\ThinkNode_CleaningDryad.cs" />
     <Compile Include="ThoughtWorkers\ThoughtWorker_Wastepacks.cs" />
   </ItemGroup>
   <ItemGroup>

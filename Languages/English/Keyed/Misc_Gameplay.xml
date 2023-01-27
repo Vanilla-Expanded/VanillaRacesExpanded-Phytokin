@@ -18,6 +18,7 @@
 	<VRE_UnlockedByGeneGau>Unlocked via Gauranlen Affinity gene</VRE_UnlockedByGeneGau>
 	<VRE_CanOnlyBeUsedOnAnimaTree>This ability needs to be used on an anima tree</VRE_CanOnlyBeUsedOnAnimaTree>
 	<VRE_CanOnlyBePlantedOnFertile>This ability needs to be used on terrain with fertility of at least 0.05</VRE_CanOnlyBePlantedOnFertile>
+	<VRE_TwoPreviousDryadsMustBeDead>A maximum of two dryads per colonist with Gauranlen affinity can be alive at the same time</VRE_TwoPreviousDryadsMustBeDead>
 	<VRE_RitualPredictedOutcomeDescAffinityGeneCount>Anima Affinity gene</VRE_RitualPredictedOutcomeDescAffinityGeneCount>
 	<VRE_RitualPredictedOutcomeDescAffinityGeneCountGau>Gauranlen Affinity gene</VRE_RitualPredictedOutcomeDescAffinityGeneCountGau>
 
