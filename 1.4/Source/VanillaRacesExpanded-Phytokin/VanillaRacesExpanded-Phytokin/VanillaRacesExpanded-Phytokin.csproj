@@ -306,8 +306,10 @@
     <Compile Include="AI\JobGivers\JobGiver_ConsumeWastepack.cs" />
     <Compile Include="Alerts\Alert_SaplingchildNeedsPlanting.cs" />
     <Compile Include="Building\Building_SaplingChild.cs" />
+    <Compile Include="Comps\CompDryadCounter.cs" />
     <Compile Include="Comps\CompTempRuinableAndDestroy.cs" />
     <Compile Include="Comps\CompVariablePollutionPump.cs" />
+    <Compile Include="Comps\Properties\CompProperties_DryadCounter.cs" />
     <Compile Include="Comps\Properties\CompProperties_TempRuinableAndDestroy.cs" />
     <Compile Include="Comps\Properties\CompProperties_VariablePollutionPump.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />

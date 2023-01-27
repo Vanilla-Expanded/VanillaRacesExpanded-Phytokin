@@ -15,6 +15,7 @@ namespace VanillaRacesExpandedPhytokin
         public int tickCounter = 0;
         public int tickInterval = 1000;
         public int gauranlen_gene_colonists_inWorld_backup = 0;
+        public int totalDryads = 0;
 
         public GauranlenGeneColonists_WorldComponent(World world) : base(world)
         {
@@ -39,6 +40,8 @@ namespace VanillaRacesExpandedPhytokin
         {
             Scribe_Values.Look<int>(ref this.gauranlen_gene_colonists_inWorld_backup, "gauranlen_gene_colonists_inWorld_backup", 0, true);
             Scribe_Values.Look<int>(ref this.tickCounter, "tickCounterGauranlen", 0, true);
+            Scribe_Values.Look<int>(ref this.totalDryads, "totalDryads", 0, true);
+
             base.ExposeData();
         }
 

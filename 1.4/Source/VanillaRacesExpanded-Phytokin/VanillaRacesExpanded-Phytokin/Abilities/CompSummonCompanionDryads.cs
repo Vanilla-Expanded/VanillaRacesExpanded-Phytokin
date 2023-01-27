@@ -35,14 +35,11 @@ namespace VanillaRacesExpandedPhytokin
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
 
-            /*int dryadNumber = 0;
+            int dryadNumber = Current.Game.World.GetComponent<GauranlenGeneColonists_WorldComponent>().totalDryads;
+            int gauGeneHolders = StaticCollectionsClass.gauranlen_gene_colonists_inWorld;
+          
 
-            foreach (Pawn pawn in Faction.OfPlayer)
-            {
-
-            }
-
-            if (dryads.Count>0)
+            if (dryadNumber>= gauGeneHolders*2)
             {
             
                     if (throwMessages)
@@ -53,7 +50,7 @@ namespace VanillaRacesExpandedPhytokin
                 
                 
             }
-            */
+            
 
 
             return base.Valid(target, throwMessages);
