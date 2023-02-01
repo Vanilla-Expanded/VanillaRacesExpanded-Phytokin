@@ -41,7 +41,6 @@
       <growMinGlow>0</growMinGlow>
       <sowResearchPrerequisites Inherit="False" />
       <dieFromToxicFallout>False</dieFromToxicFallout>
-      <showGrowthInInspectPane>false</showGrowthInInspectPane>
       <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
       <warnIfMarkedForCut>true</warnIfMarkedForCut>
       <harvestWork>1000</harvestWork>

@@ -44,7 +44,19 @@
 					<value>
 						<displayCategory>AG_BloodType</displayCategory>
 					</value>
-				</li>						
+				</li>		
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/GeneDef[defName="VRE_Female"]/modExtensions/li[@Class="VanillaGenesExpanded.GeneExtension"]</xpath>
+					<value>
+						<hideGene>true</hideGene>
+					</value>
+				</li>		
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/XenotypeDef[defName="VRE_Poluxkin"]/genes/li[@Name="AlphaGenesSwap"]</xpath>
+					<value>
+						<li Name="AlphaGenesSwap">AG_Female</li>
+					</value>
+				</li>					
 			</operations>
 		</match>
 	</Operation>

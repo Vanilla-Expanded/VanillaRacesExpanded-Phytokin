@@ -4,9 +4,9 @@
 
 	<GeneDef>
 		<defName>VRE_Female</defName>
-		<label>woman-only</label>
+		<label>female-only</label>
 		<labelShortAdj>feminine</labelShortAdj>
-		<description>Carriers of this gene have two X chromosomes and are guaranteed to be female when born.</description>
+		<description>Carriers of this gene are guaranteed to be female when born.</description>
 		<iconPath>UI/Icons/Genes/Gene_WomanOnly</iconPath>
 		<exclusionTags>
 			<li>AG_Gender</li>

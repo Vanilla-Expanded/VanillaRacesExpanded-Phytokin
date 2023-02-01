@@ -4,10 +4,12 @@
 	<AbilityDef>
 		<defName>VRE_AnimaSong</defName>
 		<label>anima song</label>
-		<description>Soothes an anima tree to make it produce a harmonious song that calms the spirit of those nearby</description>
+		<description>Target an Anima tree to cause it to sing a beautiful psychic orchestra. Instantly triggers a psychic soothe, but can only be cast once a quadrum.</description>
 		<iconPath>UI/Abilities/AnimaSong</iconPath>
 		<cooldownTicksRange>900000</cooldownTicksRange>
 		<aiCanUse>false</aiCanUse>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>
 			<range>15.9</range>
