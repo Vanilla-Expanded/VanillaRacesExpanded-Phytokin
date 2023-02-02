@@ -42,6 +42,14 @@
 						
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/GeneDef[defName="VRE_ElongatedHead"]/forcedHeadTypes</xpath>
+					<value>
+						<li>VRE_BarkElongated</li>
+						<li>VRE_BarkElongated_Female</li>
+						
+					</value>
+				</li>
 				
 			</operations>
 		</match>
