@@ -22,9 +22,7 @@
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
-      <include>
-        <li>QuestHospitalityCommon</li>
-      </include>
+     
       <rulesStrings>
         <li>questDescription->[asker_nameFull], a beleaguered phytokin, is calling from nearby. [asker_possessive] grove was completely destroyed in an ambush. [asker_pronoun] escaped, but is now being followed by (*Threat)a group of pirates(/Threat).\n\n[asker_nameDef] wants you to keep [asker_objective] safe at [map_definite] and will join the colony, but the pirates will shortly follow.</li>
       </rulesStrings>
