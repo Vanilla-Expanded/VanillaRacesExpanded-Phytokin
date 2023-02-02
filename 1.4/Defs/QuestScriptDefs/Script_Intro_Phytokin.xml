@@ -24,7 +24,7 @@
     <questDescriptionRules>
      
       <rulesStrings>
-        <li>questDescription->[asker_nameFull], a beleaguered phytokin, is calling from nearby. [asker_possessive] grove was completely destroyed in an ambush. [asker_pronoun] escaped, but is now being followed by (*Threat)a group of pirates(/Threat).\n\n[asker_nameDef] wants you to keep [asker_objective] safe at [map_definite] and will join the colony, but the pirates will shortly follow.</li>
+        <li>questDescription->[asker_nameFull], a powerful phytokin, is calling from nearby. She was cast out by [enemyFaction_name] for giving them wrong advice, and is now being hunted by a search party. The search party of [enemyFaction_pawnsPlural] is composed of: \n\n[raid/raidPawnKinds]\n\n[asker_nameFull] wants you to keep her safe at [map_definite]. If you accept, she will arrive immediately, but she will be followed by the search party that you will need to defeat.\n\nPhytokins are plant-based humanoids with an emphasis on symmetry and symbiosis. Their ability to subsist only on sunlight and affinity with any and all plantlife make them especially suited to aiding newly established colonies or underperforming industrial farms.</li>
       </rulesStrings>
     </questDescriptionRules>
 
@@ -49,7 +49,12 @@
  
         </li>
         
-      
+       <!-- Get raider faction -->
+        <li Class="QuestNode_GetFaction">
+          <allowEnemy>true</allowEnemy>
+          <mustBePermanentEnemy>true</mustBePermanentEnemy>
+          <storeAs>enemyFaction</storeAs>
+        </li>
         
         <!-- Spawn joiner -->
         <li Class="QuestNode_PawnsArrive">
@@ -74,7 +79,7 @@
             <parms>
               <inSignal>$inSignal</inSignal>
               <map>$map</map>
-              <enemyFaction>PirateWaster</enemyFaction>
+              <enemyFaction>$enemyFaction</enemyFaction>
               <points>$raidPoints</points>
               <walkInSpot>$walkInSpot</walkInSpot>
               <customLetterLabel TKey="LetterLabelLoyaltySquad">{BASELABEL}: Pursuing pirates</customLetterLabel>
