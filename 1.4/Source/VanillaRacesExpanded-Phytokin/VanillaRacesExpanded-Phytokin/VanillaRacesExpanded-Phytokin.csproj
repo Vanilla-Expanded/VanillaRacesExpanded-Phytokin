@@ -331,6 +331,7 @@
     <Compile Include="HediffComps\Properties\HediffCompProperties_Saplingchild.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_VariablePollutionPumpArtificialBuildings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestNodes\QuestNode_GeneratePhytokin.cs" />
     <Compile Include="RitualOutcomeComps\RitualOutcomeComp_GeneCount.cs" />
     <Compile Include="StaticCollections\StaticCollectionsClass.cs" />
     <Compile Include="StatParts\StatPart_ProgressiveAttunement.cs" />

@@ -7,6 +7,15 @@
 		<defName>VRE_BarkAverage</defName>
 		<graphicPath>Things/Pawn/Humanlike/Heads/BarkSkin_Average_Normal</graphicPath>
 		<randomChosen>false</randomChosen>
+		<gender>Male</gender>
+		<requiredGenes>
+			<li>VRE_BarkSkin</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>VRE_BarkAverage_Female</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/BarkSkinFemale_Average_Normal</graphicPath>
+		<randomChosen>false</randomChosen>
 		<gender>Female</gender>
 		<requiredGenes>
 			<li>VRE_BarkSkin</li>
@@ -19,6 +28,15 @@
 		<defName>VRE_BarkNarrow</defName>
 		<graphicPath>Things/Pawn/Humanlike/Heads/BarkSkin_Narrow_Normal</graphicPath>
 		<randomChosen>false</randomChosen>
+		<gender>Male</gender>
+		<requiredGenes>
+			<li>VRE_BarkSkin</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>VRE_BarkNarrow_Female</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/BarkSkinFemale_Narrow_Normal</graphicPath>
+		<randomChosen>false</randomChosen>
 		<gender>Female</gender>
 		<requiredGenes>
 			<li>VRE_BarkSkin</li>
@@ -29,6 +47,17 @@
 	<HeadTypeDef ParentName="AverageBase">
 		<defName>VRE_BarkGaunt</defName>
 		<graphicPath>Things/Pawn/Humanlike/Heads/BarkSkin_Gaunt_Normal</graphicPath>
+		<randomChosen>false</randomChosen>
+		<gender>Male</gender>
+		<selectionWeight>99999</selectionWeight>
+		<requiredGenes>
+			<li>VRE_BarkSkin</li>
+			<li>Head_Gaunt</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>VRE_BarkGaunt_Female</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/BarkSkinFemale_Gaunt_Normal</graphicPath>
 		<randomChosen>false</randomChosen>
 		<gender>Female</gender>
 		<selectionWeight>99999</selectionWeight>
@@ -43,6 +72,18 @@
 	<HeadTypeDef ParentName="HeavyJawBase">
 		<defName>VRE_BarkHeavy</defName>
 		<graphicPath>Things/Pawn/Humanlike/Heads/BarkSkin_Wide_Normal</graphicPath>
+		<randomChosen>false</randomChosen>
+		<gender>Male</gender>
+		<selectionWeight>99999</selectionWeight>
+		<requiredGenes>
+			<li>VRE_BarkSkin</li>
+			<li>Jaw_Heavy</li>
+		</requiredGenes>
+	</HeadTypeDef>
+	
+	<HeadTypeDef ParentName="HeavyJawBase">
+		<defName>VRE_BarkHeavy_Female</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/BarkSkinFemale_Wide_Normal</graphicPath>
 		<randomChosen>false</randomChosen>
 		<gender>Female</gender>
 		<selectionWeight>99999</selectionWeight>

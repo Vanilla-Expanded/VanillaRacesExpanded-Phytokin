@@ -13,7 +13,7 @@
       <li>
         <label>anima song</label>
         <description>It's like a calming voice at the back of my mind, soothing me, settling my nerves.</description>
-        <baseMoodEffect>16</baseMoodEffect>
+        <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

@@ -38,8 +38,13 @@ namespace VanillaRacesExpandedPhytokin
         public static EffecterDef EatVegetarian;
 
         public static SoundDef Meal_Eat;
+        public static SoundDef VRE_AnimaSongSound;
 
-
+        public static XenotypeDef VRE_Poluxkin;
+        [MayRequireRoyalty]
+        public static XenotypeDef VRE_Animakin;
+        [MayRequireIdeology]
+        public static XenotypeDef VRE_Gauranlenkin;
 
 
 

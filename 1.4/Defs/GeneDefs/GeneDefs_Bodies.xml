@@ -32,6 +32,10 @@
 			<li>VRE_BarkNarrow</li>
 			<li>VRE_BarkGaunt</li>
 			<li>VRE_BarkHeavy</li>
+			<li>VRE_BarkAverage_Female</li>
+			<li>VRE_BarkNarrow_Female</li>
+			<li>VRE_BarkGaunt_Female</li>
+			<li>VRE_BarkHeavy_Female</li>
 		</forcedHeadTypes>
 		<statOffsets>
 			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>

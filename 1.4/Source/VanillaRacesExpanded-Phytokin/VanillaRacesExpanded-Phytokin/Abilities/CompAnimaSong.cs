@@ -29,6 +29,7 @@ namespace VanillaRacesExpandedPhytokin
             {
                 item.needs?.mood?.thoughts.memories.TryGainMemory(InternalDefOf.VRE_AnimaSong);
             }
+            InternalDefOf.VRE_AnimaSongSound.PlayOneShotOnCamera(plant.Map);
 
 
         }
