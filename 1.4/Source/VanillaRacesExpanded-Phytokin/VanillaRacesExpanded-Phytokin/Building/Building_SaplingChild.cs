@@ -14,7 +14,7 @@ namespace VanillaRacesExpandedPhytokin
         public XenotypeDef motherXenotype;
         public int tickCounter = 0;
         public int ticksToCheckGraphic = 6000;
-        public int ticksToBirth = 180000; // 30 days
+        public int ticksToBirth = 1800000; // 30 days
         public bool successfulBirth = false;
         public Pawn mother;
 
