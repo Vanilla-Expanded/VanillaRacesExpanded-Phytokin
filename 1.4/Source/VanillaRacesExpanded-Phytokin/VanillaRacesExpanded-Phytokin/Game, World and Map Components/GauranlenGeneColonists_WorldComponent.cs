@@ -40,7 +40,7 @@ namespace VanillaRacesExpandedPhytokin
         {
             Scribe_Values.Look<int>(ref this.gauranlen_gene_colonists_inWorld_backup, "gauranlen_gene_colonists_inWorld_backup", 0, true);
             Scribe_Values.Look<int>(ref this.tickCounter, "tickCounterGauranlen", 0, true);
-            Scribe_Values.Look<int>(ref this.totalDryads, "totalDryads", 0, true);
+           
 
             base.ExposeData();
         }
