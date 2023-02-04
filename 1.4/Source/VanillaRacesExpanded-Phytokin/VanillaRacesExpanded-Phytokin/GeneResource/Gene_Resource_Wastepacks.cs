@@ -59,9 +59,12 @@ namespace VanillaRacesExpandedPhytokin
         public override void Notify_IngestedThing(Thing thing, int numTaken)
         {
 
+            if(thing.def == ThingDefOf.Wastepack)
+            {
+                Value += 0.5f;
+                lastConsumed = Find.TickManager.TicksGame;
+            }
             
-            Value += 0.5f;           
-            lastConsumed = Find.TickManager.TicksGame;
             
 
         }
