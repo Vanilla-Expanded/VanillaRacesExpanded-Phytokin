@@ -160,7 +160,7 @@ namespace VanillaRacesExpandedPhytokin
             base.CompTick();
             if (Props.disabledByArtificialBuildings && Find.TickManager.TicksGame % CheckInterval == 0)
             {
-                disabledByArtificialBuildings = Find.CurrentMap.listerArtificialBuildingsForMeditation.GetForCell(parent.Position, Props.radius + StaticCollectionsClass.polux_gene_colonists_inMap * 2).Count > 0;
+                disabledByArtificialBuildings = parent.Map.listerArtificialBuildingsForMeditation.GetForCell(parent.Position, Props.radius + StaticCollectionsClass.polux_gene_colonists_inMap * 2).Count > 0;
             }
             if (parent.IsHashIntervalTick(CheckInterval) && Active)
             {
