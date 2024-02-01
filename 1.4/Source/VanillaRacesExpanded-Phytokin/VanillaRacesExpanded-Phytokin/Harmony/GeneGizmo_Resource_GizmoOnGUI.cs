@@ -27,8 +27,8 @@ namespace VanillaRacesExpandedPhytokin
 
             if (___gene.def == InternalDefOf.VRE_PoluxAffinity)
             {
-                ___barTex = SolidColorMaterials.NewSolidColorTexture(new ColorInt(128, 108, 131).ToColor);
-                ___barHighlightTex = SolidColorMaterials.NewSolidColorTexture(new ColorInt(150, 127, 153).ToColor);
+                ___barTex = GraphicsCache.poluxAffinityBarTex;
+                ___barHighlightTex = GraphicsCache.poluxAffinityBarHighlightTex;
                 return;
             }
             
