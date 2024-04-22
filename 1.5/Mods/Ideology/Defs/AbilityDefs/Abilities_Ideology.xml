@@ -8,7 +8,7 @@
 		<description>Summons two companion dryads under the control of the caster. These dryads are permanent colony animals, and can haul, clean, caravan, and be drafted. Two new dryads can be summoned if the previous ones are killed. The ability has a cooldown of 1 quadrum.</description>
 		<iconPath>Things/Pawn/Animal/Companiondryad/Companiondryad_east</iconPath>
 		
-	
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<aiCanUse>false</aiCanUse>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
