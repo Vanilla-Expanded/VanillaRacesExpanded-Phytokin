@@ -10,3 +10,7 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Phytokin\1.5\Source\VanillaRacesExpanded-Phytokin\VanillaRacesExpanded-Phytokin\obj\Debug\VanillaRacesExpanded-Phytokin.csproj.AssemblyReference.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Phytokin\1.5\Source\VanillaRacesExpanded-Phytokin\VanillaRacesExpanded-Phytokin\obj\Debug\VanillaRacesExpanded-Phytokin.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Phytokin\1.5\Source\VanillaRacesExpanded-Phytokin\VanillaRacesExpanded-Phytokin\obj\Debug\VanillaRacesExpanded-Phytokin.dll
+E:\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Phytokin\1.5\Assemblies\VanillaRacesExpanded-Phytokin.dll
+E:\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Phytokin\1.5\Source\VanillaRacesExpanded-Phytokin\VanillaRacesExpanded-Phytokin\obj\Debug\VanillaRacesExpanded-Phytokin.csproj.AssemblyReference.cache
+E:\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Phytokin\1.5\Source\VanillaRacesExpanded-Phytokin\VanillaRacesExpanded-Phytokin\obj\Debug\VanillaRacesExpanded-Phytokin.csproj.CoreCompileInputs.cache
+E:\Steam\steamapps\common\RimWorld\Mods\VanillaRacesExpanded-Phytokin\1.5\Source\VanillaRacesExpanded-Phytokin\VanillaRacesExpanded-Phytokin\obj\Debug\VanillaRacesExpanded-Phytokin.dll

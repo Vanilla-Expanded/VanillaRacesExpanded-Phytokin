@@ -33,9 +33,9 @@ namespace VanillaRacesExpandedPhytokin
 			Pawn pawn = thing as Pawn;
             if (pawn != null) {
 				offset = pawn.ageTracker.AgeBiologicalYears * 0.01f;
-				if (offset > 1)
+				if (offset > 10)
 				{
-					offset = 1f;
+					offset = 10f;
 				}
 			}
 			return offset;
