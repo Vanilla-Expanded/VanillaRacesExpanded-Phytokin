@@ -1,12 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Verse;
 using Verse.AI;
+using RimWorld;
 
 namespace VanillaRacesExpandedPhytokin
 {
     public class JobDriver_PlantSaplingchild : JobDriver
     {
-        private IntVec3 TargetPosition => job.GetTarget(TargetIndex.A).Cell;
+
+
+       
+
+        private IntVec3 TargetPosition
+        {
+            get
+            {
+                return this.job.GetTarget(TargetIndex.A).Cell;
+            }
+        }
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -15,41 +27,45 @@ namespace VanillaRacesExpandedPhytokin
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch).FailOnDespawnedOrNull(TargetIndex.A);
-            Toil toil = Toils_General
-                .Wait(600)
-                .WithProgressBarToilDelay(TargetIndex.A)
-                .FailOnDespawnedOrNull(TargetIndex.A)
-                .FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
-            yield return toil;
             
-            Toil createSaplingChild = new Toil
+           
+            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch).FailOnDespawnedOrNull(TargetIndex.A);
+            Toil toil = Toils_General.Wait(600, TargetIndex.None);
+            toil.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
+            toil.FailOnDespawnedOrNull(TargetIndex.A);
+            toil.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
+            yield return toil;
+            Toil createSaplingChild = new Toil();
+            createSaplingChild.initAction = delegate ()
             {
-                initAction = delegate
+                Thing thing = ThingMaker.MakeThing(InternalDefOf.VRE_SaplingchildTree, null);
+                thing.stackCount = 1;
+                Thing t;
+                GenPlace.TryPlaceThing(thing, TargetPosition, pawn.Map, ThingPlaceMode.Direct, out t, null, null, default(Rot4));
+
+                Building_SaplingChild sapling = thing as Building_SaplingChild;
+
+                Hediff pregnancy = pawn.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VRE_Saplingchild);
+                if (pregnancy != null)
                 {
-                    Thing thing = ThingMaker.MakeThing(InternalDefOf.VRE_SaplingchildTree);
-                    thing.stackCount = 1;
-                    GenPlace.TryPlaceThing(thing, TargetPosition, pawn.Map, ThingPlaceMode.Direct, out _);
-
-                    Building_SaplingChild sapling = thing as Building_SaplingChild;
-
-                    Hediff pregnancy = pawn.health?.hediffSet?.GetFirstHediffOfDef(InternalDefOf.VRE_Saplingchild);
-                    HediffComp_Saplingchild comp = pregnancy?.TryGetComp<HediffComp_Saplingchild>();
+                    HediffComp_Saplingchild comp = pregnancy.TryGetComp<HediffComp_Saplingchild>();
                     if (comp != null)
                     {
-                        comp.Miscarriage = false;
-                        sapling.MotherGenes = comp.MotherGenes;
-                        sapling.MotherXenotype = comp.MotherXenotype;
-                        sapling.MotherXenotypeIcon = comp.MotherXenotypeIcon;
-                        sapling.MotherXenotypeName = comp.MotherXenotypeName;
-                        sapling.MotherUniqueXenotype = comp.MotherUniqueXenotype;
-                        sapling.Mother = pawn;
+                        comp.miscarriage = false;
+                        sapling.motherGenes = comp.motherGenes;
+                        sapling.motherXenotype = comp.motherXenotype;
+                        sapling.mother = pawn;
                         sapling.SetFaction(pawn.Faction);
                         pawn.health.RemoveHediff(pregnancy);
                     }
+                    
                 }
+                
+                
             };
             yield return createSaplingChild;
+            yield break;
         }
+
     }
 }
