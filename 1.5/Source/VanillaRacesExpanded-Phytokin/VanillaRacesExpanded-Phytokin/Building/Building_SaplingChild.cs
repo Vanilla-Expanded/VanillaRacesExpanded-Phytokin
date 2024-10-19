@@ -4,6 +4,7 @@ using RimWorld;
 using System.Collections.Generic;
 using UnityEngine;
 using RimWorld.Planet;
+using LudeonTK;
 
 namespace VanillaRacesExpandedPhytokin
 {
@@ -35,8 +36,8 @@ namespace VanillaRacesExpandedPhytokin
                 return motherXenotypeLabel;
             }
         }
-        
         private bool MotherUniqueXenotype => motherXenotypeLabel != null;
+        private bool ShouldHatch => tickCounter > ticksToBirth;
 
         public override void ExposeData()
         {
@@ -72,20 +73,15 @@ namespace VanillaRacesExpandedPhytokin
         {
             base.Tick();
             tickCounter++;
-            if ((tickCounter > ticksToBirth))
-            {
-
-                Hatch();
-
-
-            }
+            
+            HatchIfReady();
+            
             if (tickCounter % ticksToCheckGraphic == 0)
             {
-                base.Map.mapDrawer.MapMeshDirty(base.Position, MapMeshFlagDefOf.Things | MapMeshFlagDefOf.Buildings);
+                ResetGraphic();
             }
 
         }
-
         public override Graphic Graphic
         {
             get
@@ -207,6 +203,32 @@ namespace VanillaRacesExpandedPhytokin
                 this.Destroy();
             }
         }
+        private bool HatchIfReady()
+        {
+            if (ShouldHatch)
+            {
+                Hatch();
+                return true;
+            }
+
+            return false;
+        }
+        
+        private void ResetGraphic()
+        {
+            Map.mapDrawer.MapMeshDirty(Position, MapMeshFlagDefOf.Things | MapMeshFlagDefOf.Buildings);
+        }
+        
+        private void ProgressBirth(int i)
+        {
+            ProgressBirth((float)i);
+        }
+
+        private void ProgressBirth(float i)
+        {
+            tickCounter += (int)(ticksPerDay * i);
+            ResetGraphic();
+        }
         
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -225,8 +247,73 @@ namespace VanillaRacesExpandedPhytokin
                 defaultLabel = "DEV: Hatch Now",
                 action = Hatch
             };
+            
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: Progress Birth (1 hour)",
+                action = () => ProgressBirth(1f / 24f)
+            };
+            
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: Progress Birth (1 day)",
+                action = () => ProgressBirth(1)
+            };
+            
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: Progress Birth (2 days)",
+                action = () => ProgressBirth(2)
+            };
+            
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: Progress Birth (5 days)",
+                action = () => ProgressBirth(5)
+            };
         }
 
-
+        [DebugAction("Pawns", name: "Create Saplingchild", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void CreateSaplingChild()
+        {
+            var pawnAction = new DebugActionNode(
+                "Select Mother...",
+                DebugActionType.ToolMapForPawns,
+                pawnAction: pawn =>
+                {
+                    if (!pawn.genes.HasActiveGene(InternalDefOf.VRE_SaplingBirth))
+                    {
+                        Log.Warning("Selected pawn does not have the Sapling Birth gene.");
+                        return;
+                    }
+                    
+                    var pos = new DebugActionNode(
+                        "Select Location...",
+                        DebugActionType.ToolMap,
+                        action: () =>
+                        {
+                            var comp = new HediffComp_Saplingchild
+                            {
+                                parent = new HediffWithComps
+                                {
+                                    pawn = pawn
+                                }
+                            };
+                            comp.CompPostMake();
+        
+                            var thing = ThingMaker.MakeThing(InternalDefOf.VRE_SaplingchildTree);
+                            thing.stackCount = 1;
+                            GenPlace.TryPlaceThing(thing, UI.MouseCell(), pawn.Map, ThingPlaceMode.Direct, out _);
+        
+                            var sapling = thing as Building_SaplingChild;
+        
+                            JobDriver_PlantSaplingchild.SetSaplingInfo(pawn, ref comp, ref sapling);
+                        }
+                    );
+                    pos.Enter(null);
+                }
+            );
+            pawnAction.Enter(null);
+        }
     }
 }

@@ -51,11 +51,7 @@ namespace VanillaRacesExpandedPhytokin
                     HediffComp_Saplingchild comp = pregnancy.TryGetComp<HediffComp_Saplingchild>();
                     if (comp != null)
                     {
-                        comp.miscarriage = false;
-                        sapling.motherGenes = comp.motherGenes;
-                        sapling.motherXenotype = comp.motherXenotype;
-                        sapling.mother = pawn;
-                        sapling.SetFaction(pawn.Faction);
+                        SetSaplingInfo(pawn, ref comp, ref sapling);
                         pawn.health.RemoveHediff(pregnancy);
                     }
                     
@@ -67,5 +63,13 @@ namespace VanillaRacesExpandedPhytokin
             yield break;
         }
 
+        public static void SetSaplingInfo(Pawn pawn, ref HediffComp_Saplingchild comp, ref Building_SaplingChild sapling)
+        {
+            comp.miscarriage = false;
+            sapling.motherGenes = comp.motherGenes;
+            sapling.motherXenotype = comp.motherXenotype;
+            sapling.mother = pawn;
+            sapling.SetFaction(pawn.Faction);
+        }
     }
 }
