@@ -16,6 +16,8 @@ namespace VanillaRacesExpandedPhytokin
         public bool miscarriage = true;
         public List<GeneDef> motherGenes = new List<GeneDef>();
         public XenotypeDef motherXenotype;
+        public XenotypeIconDef motherXenotypeIcon;
+        public string motherXenotypeLabel;
 
         public HediffCompProperties_Saplingchild Props
         {
@@ -31,6 +33,8 @@ namespace VanillaRacesExpandedPhytokin
             Scribe_Values.Look(ref this.miscarriage, nameof(this.miscarriage), true);
             Scribe_Collections.Look(ref this.motherGenes, nameof(this.motherGenes), LookMode.Def);
             Scribe_Defs.Look(ref this.motherXenotype, nameof(this.motherXenotype));
+            Scribe_Defs.Look(ref this.motherXenotypeIcon, nameof(this.motherXenotypeIcon));
+            Scribe_Values.Look(ref this.motherXenotypeLabel, nameof(this.motherXenotypeLabel));
         }
 
         public override void CompPostMake()
@@ -40,7 +44,19 @@ namespace VanillaRacesExpandedPhytokin
             {
                 motherGenes.Add(gene.def);
             }
+            
             motherXenotype = parent.pawn.genes.Xenotype;
+
+            if (parent.pawn.genes.UniqueXenotype)
+            {
+                motherXenotypeIcon = parent.pawn.genes.iconDef;
+                motherXenotypeLabel = parent.pawn.genes.xenotypeName;
+            }
+            else
+            {
+                motherXenotypeIcon = null;
+                motherXenotypeLabel = parent.pawn.genes.Xenotype.LabelCap;
+            }
             
             base.CompPostMake();
         }
