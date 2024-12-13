@@ -7,6 +7,7 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<isBad>false</isBad>
 		<comps>
 			<li Class="AnimalBehaviours.HediffCompProperties_StageBySunlight">
@@ -35,6 +36,7 @@
 		<description>This person has a thick, sticky, orange blood that greatly slows down their bleed out time, however it also impacts their ability to do work.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<stages>
@@ -55,6 +57,7 @@
 		<label>saplingchild needs planting</label>
 		<description>When a colonist with saplingbirth gene becomes pregnant, they need to designate a place to plant their offspring. If they don’t do it before the second trimester begins (6 days), the pregnancy will be terminated.</description>
 		<hediffClass>HediffWithComps</hediffClass>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>

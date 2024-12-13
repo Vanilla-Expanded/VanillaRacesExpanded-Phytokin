@@ -5,7 +5,7 @@
 		<xpath>/Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
 		<value>
 			<li Class="StorytellerCompProperties_SingleOnceFixed">
-				<fireAfterDaysPassed>30</fireAfterDaysPassed>
+				<fireAfterDaysPassed>35</fireAfterDaysPassed>
 				<incident MayRequire="Ludeon.RimWorld.Royalty">VRE_GiveQuest_Intro_Phytokin</incident>
 				<skipIfOnExtremeBiome>false</skipIfOnExtremeBiome>
 				<allowedTargetTags>
