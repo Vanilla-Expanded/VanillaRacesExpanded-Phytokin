@@ -9,10 +9,24 @@ namespace VanillaRacesExpandedPhytokin
 {
     public class GeneGizmo_Resource_Wastepacks : GeneGizmo_Resource
     {
+        private static bool draggingBar;
+
         public GeneGizmo_Resource_Wastepacks(Gene_Resource_Wastepacks gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barhighlightColor) : base(gene, drainGenes, barColor, barhighlightColor)
         {
        
         }
+        protected override bool DraggingBar
+        {
+            get
+            {
+                return draggingBar;
+            }
+            set
+            {
+                draggingBar = value;
+            }
+        }
+
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
         {
             GizmoResult result = base.GizmoOnGUI(topLeft, maxWidth, parms);
