@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using VanillaRacesExpandedPhytokin;
 using Verse;
@@ -35,11 +36,13 @@ namespace VanillaRacesExpandedPhytokin
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
 
-            int dryadNumber = Current.Game.World.GetComponent<GauranlenGeneColonists_WorldComponent>().totalDryads;
-            int gauGeneHolders = StaticCollectionsClass.gauranlen_gene_colonists_inWorld;
+            
+            int? gauGeneHolders = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_OfPlayerFaction.Where(x => x.genes?.HasActiveGene(InternalDefOf.VRE_GauranlenAffinity)==true)?.Count();
+
+            int? dryadNumber = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_OfPlayerFaction.Where(x => x.kindDef == InternalDefOf.VRE_CompanionDryad)?.Count();
           
 
-            if (dryadNumber>= gauGeneHolders*2)
+            if (dryadNumber >= gauGeneHolders*2)
             {
             
                     if (throwMessages)

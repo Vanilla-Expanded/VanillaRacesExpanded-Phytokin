@@ -17,8 +17,7 @@ namespace VanillaRacesExpandedPhytokin
 
         // Number of colonists with the Polux Affinity gene currently on the map 
         public static int polux_gene_colonists_inMap;
-        // Number of colonists with the Gauranlen Affinity gene currently on the world 
-        public static int gauranlen_gene_colonists_inWorld;
+       
 
 
         public static void AddColonistToSaplingBirthAlert(Thing thing)

@@ -9,7 +9,7 @@ namespace VanillaRacesExpandedPhytokin
 {
     public class CompDryadCounter : ThingComp
     {
-       
+       // Unused, kept just in case removing it breaks things
 
         public CompProperties_DryadCounter Props
         {
@@ -19,7 +19,7 @@ namespace VanillaRacesExpandedPhytokin
             }
         }
 
-       
+       /*
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
@@ -59,6 +59,6 @@ namespace VanillaRacesExpandedPhytokin
             };
         }
 
-
+        */
     }
 }

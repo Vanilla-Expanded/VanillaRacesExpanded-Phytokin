@@ -313,7 +313,6 @@
     <Compile Include="Comps\Properties\CompProperties_TempRuinableAndDestroy.cs" />
     <Compile Include="Comps\Properties\CompProperties_VariablePollutionPump.cs" />
     <Compile Include="DefOfs\InternalDefOf.cs" />
-    <Compile Include="Game, World and Map Components\GauranlenGeneColonists_WorldComponent.cs" />
     <Compile Include="Game, World and Map Components\PoluxGeneColonists_MapComponent.cs" />
     <Compile Include="Game, World and Map Components\SaplingBirth_MapComponent.cs" />
     <Compile Include="GeneResource\GeneGizmo_Resource_Wastepacks.cs" />
