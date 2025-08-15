@@ -22,12 +22,21 @@ namespace VanillaRacesExpandedPhytokin
 
             base.Apply(target, dest);
 
-           
+            int? gauGeneHolders = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_OfPlayerFaction.Where(x => x.genes?.HasActiveGene(InternalDefOf.VRE_GauranlenAffinity) == true)?.Count();
+
+            int? dryadNumber = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_OfPlayerFaction.Where(x => x.kindDef == InternalDefOf.VRE_CompanionDryad)?.Count();
+
+            if (dryadNumber != gauGeneHolders * 2 - 1)
+            {
+                Pawn pawnCreated2 = PawnGenerator.GeneratePawn(InternalDefOf.VRE_CompanionDryad, parent.pawn.Faction);
+                Pawn pawn2 = (Pawn)GenSpawn.Spawn(pawnCreated2, target.Cell, parent.pawn.Map, Rot4.South);
+            }
 
             Pawn pawnCreated = PawnGenerator.GeneratePawn(InternalDefOf.VRE_CompanionDryad, parent.pawn.Faction);
-            Pawn pawnCreated2 = PawnGenerator.GeneratePawn(InternalDefOf.VRE_CompanionDryad, parent.pawn.Faction);
             Pawn pawn1 = (Pawn)GenSpawn.Spawn(pawnCreated, target.Cell, parent.pawn.Map, Rot4.South);
-            Pawn pawn2 = (Pawn)GenSpawn.Spawn(pawnCreated2, target.Cell, parent.pawn.Map, Rot4.South);
+
+
+        
 
            
 
