@@ -4,6 +4,7 @@ using System;
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
+using VEF.CacheClearing;
 
 
 namespace VanillaRacesExpandedPhytokin
@@ -17,8 +18,12 @@ namespace VanillaRacesExpandedPhytokin
 
         // Number of colonists with the Polux Affinity gene currently on the map 
         public static int polux_gene_colonists_inMap;
-       
 
+        static StaticCollectionsClass()
+        {
+            ClearCaches.clearCacheTypes.Add(typeof(StaticCollectionsClass));
+
+        }
 
         public static void AddColonistToSaplingBirthAlert(Thing thing)
         {
