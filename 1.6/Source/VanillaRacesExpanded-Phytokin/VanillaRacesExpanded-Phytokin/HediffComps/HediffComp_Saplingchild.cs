@@ -79,7 +79,7 @@ namespace VanillaRacesExpandedPhytokin
                 defaultLabel = "VRE_PlantSaplingchild".Translate(),
                 defaultDesc = "VRE_PlantSaplingchildDesc".Translate(),
                 icon = ContentFinder<Texture2D>.Get("UI/Abilities/PlantSaplingchild", true),
-                targetingParams = new TargetingParameters { canTargetLocations = true },
+                targetingParams = new TargetingParameters { canTargetLocations = true,canTargetPawns=false },
                 action = delegate (LocalTargetInfo target)
                 {
                     TryCreateSaplingChild(target);
@@ -92,7 +92,7 @@ namespace VanillaRacesExpandedPhytokin
 
         public void TryCreateSaplingChild(LocalTargetInfo target)
         {
-            if (target.Cell.GetTerrain(parent.pawn.Map).IsSoil)
+            if (target.Cell.GetTerrain(parent.pawn.Map).IsSoil || target.Cell.GetTerrain(parent.pawn.Map).HasTag("GrowSoil"))
             {
                 Job job = new Job(InternalDefOf.VRE_PlantSaplingchild, target);
                 

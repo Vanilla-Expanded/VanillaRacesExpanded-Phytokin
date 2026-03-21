@@ -14,9 +14,9 @@ namespace VanillaRacesExpandedPhytokin
 	public static class VanillaRacesExpandedPhytokin_Hediff_Pregnant_TickInterval
     {
 		[HarmonyPrefix]
-		public static bool Prefix(Hediff_Pregnant __instance)
+		public static bool Prefix(Hediff_Pregnant __instance, int delta)
 		{
-			if ((Find.TickManager.TicksAbs % 200 == 0) && (__instance?.pawn?.genes?.HasActiveGene(InternalDefOf.VRE_SaplingBirth) ?? false))
+			if ((__instance?.pawn?.IsHashIntervalTick(200,delta)==true) && (__instance?.pawn?.genes?.HasActiveGene(InternalDefOf.VRE_SaplingBirth) ?? false))
 			{
 				try
 				{
