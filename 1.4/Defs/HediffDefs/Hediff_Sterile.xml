@@ -4,7 +4,7 @@
 	<HediffDef>
 		<defName>VRE_TempSterile</defName>
 		<label>sapling fatigue</label>
-		<description>After being ready to create a sapligchild, the person with the saplingbirth gene goes through a short period of sterility till they are capable of producing another. This is only a temporary condition and causes no long term effects.</description>
+		<description>After being ready to create a saplingchild, the person with the saplingbirth gene goes through a short period of sterility till they are capable of producing another. This is only a temporary condition and causes no long term effects.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<initialSeverity>1.0</initialSeverity>
 		<comps>
