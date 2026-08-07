@@ -46,6 +46,10 @@ namespace VanillaRacesExpandedPhytokin
         [MayRequireIdeology]
         public static XenotypeDef VRE_Gauranlenkin;
 
+       
+        [MayRequire("VanillaExpanded.VExplorationE, Ludeon.RimWorld.Royalty")]
+        public static ThingDef VEE_Plant_TreeAnima_Ancient;
+
 
 
 
