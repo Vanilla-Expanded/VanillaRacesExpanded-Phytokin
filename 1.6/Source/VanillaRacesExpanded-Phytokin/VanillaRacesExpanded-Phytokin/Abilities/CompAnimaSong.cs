@@ -42,7 +42,7 @@ namespace VanillaRacesExpandedPhytokin
                 return base.Valid(target, throwMessages);
             }
 
-            if (plant.def != ThingDefOf.Plant_TreeAnima || plant.def != InternalDefOf.VEE_Plant_TreeAnima_Ancient)
+            if (plant.def != ThingDefOf.Plant_TreeAnima && plant.def != InternalDefOf.VEE_Plant_TreeAnima_Ancient)
             {
                 if (throwMessages)
                 {
