@@ -14,7 +14,7 @@ namespace VanillaRacesExpandedPhytokin
 	public static class VanillaRacesExpandedPhytokin_Recipe_ExtractOvum_CompletableEver
 	{
 		[HarmonyPostfix]
-		public static void Postfix(Recipe_ImplantEmbryo __instance, Pawn surgeryTarget, ref bool __result)
+		public static void Postfix(Recipe_ExtractOvum __instance, Pawn surgeryTarget, ref bool __result)
 		{
 			if (__result && (surgeryTarget.genes?.HasActiveGene(InternalDefOf.VRE_SaplingBirth) ?? false))
 			{
